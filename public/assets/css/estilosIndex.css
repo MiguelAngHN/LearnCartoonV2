@@ -48,7 +48,7 @@
   .Introduccion1 img {
     width: 40%;
     margin: 0 0 0 10px;
-    border-radius: 50px;
+    border-radius: 200px 110px 180px 150px;
   }
   .Introduccion2 {
     display: flex;

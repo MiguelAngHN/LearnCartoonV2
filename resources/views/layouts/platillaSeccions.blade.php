@@ -110,7 +110,7 @@
                   </li>
                   <!-- <li><hr class="dropdown-divider"></li> -->
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.bocetos')}}">Bocetos</a>
+                    <a class="dropdown-item" href="{{route('bocetos.index')}}">Bocetos</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.dibujo')}}">Dibujo</a>

@@ -9,6 +9,7 @@ use App\Http\Controllers\SeccionController;
 use App\Http\Controllers\TemaController;
 use App\Http\Controllers\TipoController;
 use App\Http\Controllers\ActividadController;
+use App\Http\Controllers\BocetoController;
 use App\Http\Controllers\MultimediaController;
 
 Route::get('/', function(){
@@ -65,10 +66,12 @@ Route::get('seccions-Letras y palabras', function(){
     return view('seccions.letrasypalabras');
 })->name('seccions.lyp');
 
-Route::get('seccions-Bocetos', function(){
-    return view('seccions.bocetos');
-})->name('seccions.bocetos');
-
 Route::get('seccions-Dibujo', function(){
     return view('seccions.dibujo');
 })->name('seccions.dibujo');
+
+Route::get('bocetos', [BocetoController::class, 'index'])->name('bocetos.index');
+Route::post('bocetos', [BocetoController::class, 'store'])->name('bocetos.store');
+Route::get('bocetos/create', [BocetoController::class, 'create'])->name('bocetos.create');
+Route::delete('bocetos/{boceto}', [BocetoController::class, 'destroy'])->name('bocetos.destroy');
+Route::get('bocetos/{boceto}', [BocetoController::class, 'show'])->name('bocetos.show');
